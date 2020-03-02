@@ -12,10 +12,11 @@ class ViewController: UIViewController {
 
   @IBOutlet var helloWorldLabel: UILabel!
   @IBOutlet var showButtonName: UIButton!
+  @IBOutlet var svcButtonName: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    showButtonName.layer.cornerRadius = 20
+    setCornerRadius(to: 22)
     helloWorldLabel.isHidden = true
   }
 
@@ -30,6 +31,13 @@ class ViewController: UIViewController {
     }
     
   }
+
+  func setCornerRadius(to radius: CGFloat) {
+    showButtonName.layer.cornerRadius = radius
+    svcButtonName.layer.cornerRadius = radius
+  }
   
 }
+  
+  
 
