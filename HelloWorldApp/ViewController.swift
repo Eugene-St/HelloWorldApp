@@ -10,11 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet var helloWorldLabel: UILabel!
+  @IBOutlet var showButtonName: UIButton!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    showButtonName.layer.cornerRadius = 20
+    helloWorldLabel.isHidden = true
   }
 
-
+  @IBAction func showButtonPressed() {
+    
+    if helloWorldLabel.isHidden {
+      helloWorldLabel.isHidden = false
+      showButtonName.setTitle("Hide text", for: .normal)
+    } else {
+      helloWorldLabel.isHidden = true
+      showButtonName.setTitle("Show text", for: .normal)
+    }
+    
+  }
+  
 }
 
